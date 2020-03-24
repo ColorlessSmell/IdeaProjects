@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Sorts {
 
-    public static void sort(ArrayList<Club> clubList, int size, Comparator<Club>){
+    public static void sort(ArrayList<Club> clubList, int size, Comparator<Club> newComparator){
 
         MemberNumberComparator numberComparator = new MemberNumberComparator();
         selectionSort(clubList, numberComparator);

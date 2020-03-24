@@ -13,11 +13,11 @@ public class President
     private String academicLevel;
 
     //Constructor method to initialize intance variables.
-    public President()
+    public President(String fName, String lName, String academicLevel)
     {
-        firstName = new String("?");
-        lastName= new String("?");
-        academicLevel = new String("?");
+        firstName = fName;
+        lastName= lName;
+        this.academicLevel = academicLevel;
     }
 
     //Accessor method for first name

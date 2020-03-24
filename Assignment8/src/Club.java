@@ -12,12 +12,12 @@ public class Club
     private President currentPresident;
 
     //Constructor to initialize all member variables
-    public Club()
+    public Club(String cName, int numOfMembers, String uni, President newPresident)
     {
         clubName = "?";
         university = "?";
         numberOfMembers = 0;
-        currentPresident = new President();
+        currentPresident = newPresident;
     }
 
     //Accessor method for club name
