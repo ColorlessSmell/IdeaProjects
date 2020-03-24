@@ -72,7 +72,10 @@ public class Club
 
     public void copy(Club other){
 
-        
+        this.clubName = other.getClubName();
+        this.numberOfMembers = other.getNumberOfMembers();
+        this.university = other.getUniversity();
+        this.currentPresident = other.getCurrentPresident();
 
     }
 
