@@ -65,7 +65,10 @@ public class ClubManagement extends Sorts implements Serializable{
 
             if (clubList[i] != null){
 
-                if (clubList[i].getClubName().equals(clubName) && clubList[i].getUniversity().equals(university)){
+                String c = clubList[i].getClubName();
+                String u = clubList[i].getUniversity();
+
+                if (c.equals(clubName) && u.equals(university)){
 
                     result = i;
 
@@ -97,11 +100,10 @@ public class ClubManagement extends Sorts implements Serializable{
         result = false;
         System.out.println(checking);
     } else if (checking == -1) {
-        System.out.println(checking);
         President newPresident = new President(firstName, lastName, academicLevel);
         Club newClub = new Club(clubName, numberOfMembers, university, newPresident);
-        clubList[numberOfClubs+1] = newClub;
         numberOfClubs++;
+        clubList[numberOfClubs] = newClub;
         result = true;
     }
 
