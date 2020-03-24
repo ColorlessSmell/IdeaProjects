@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ClubManagement implements Serializable {
 
     public Club[] clubList;
-    private int numberOfClubs;
+    public int numberOfClubs;
     private int maxSize;
 
     /*
