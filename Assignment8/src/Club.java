@@ -14,9 +14,9 @@ public class Club
     //Constructor to initialize all member variables
     public Club(String cName, int numOfMembers, String uni, President newPresident)
     {
-        clubName = "?";
-        university = "?";
-        numberOfMembers = 0;
+        clubName = cName;
+        university = uni;
+        numberOfMembers = numOfMembers;
         currentPresident = newPresident;
     }
 
