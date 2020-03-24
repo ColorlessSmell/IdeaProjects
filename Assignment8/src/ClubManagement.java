@@ -29,32 +29,6 @@ public class ClubManagement extends Sorts implements Serializable{
     }
 
     /*
-    This method searches for a Club object by clubName and its university,
-    and return the index of the object if found. Return -1 if not found.
-    The parameters are the club name and the university of a Club object.
-     */
-    public int clubExists(String clubName, String university){
-
-        int result = -1;
-        int i = 0;
-
-        while (clubList[i] != null && !clubList[i].getClubName().equals(clubName) && !clubList[i].getUniversity().equals(university)){
-            int k = 0;
-            if (clubList[i].getClubName().equals(clubName) && clubList[i].getUniversity().equals(university)){
-                result = k;
-            } else {
-                i++;
-                k++;
-                result = -1;
-            }
-
-        }
-
-        return result;
-
-    }
-
-    /*
     This method searches the clubList objects for the president, returns index if president is found
     returns -1 if not found.
      */
@@ -70,6 +44,33 @@ public class ClubManagement extends Sorts implements Serializable{
             } else {
                 result = -1;
                 i++;
+            }
+
+        }
+
+        return result;
+
+    }
+
+    /*
+    This method searches for a Club object by clubName and its university,
+    and return the index of the object if found. Return -1 if not found.
+    The parameters are the club name and the university of a Club object.
+     */
+    public int clubExists(String clubName, String university){
+
+        int result = -1;
+
+        for (int i = 0; i < numberOfClubs; i++){
+
+            if (clubList[i] != null){
+
+                if (clubList[i].getClubName().equals(clubName) && clubList[i].getUniversity().equals(university)){
+
+                    result = i;
+
+                }
+
             }
 
         }
