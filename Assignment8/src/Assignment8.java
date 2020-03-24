@@ -162,7 +162,7 @@ public class Assignment8
                             System.out.print("Please enter a file name to write:\n");
                             filename = stdin.readLine().trim();
                             /************************************************************************************
-                             ***  ADD your code to write the club management oject to the specified file. Catch exceptions.
+                             ***  ADD your code to write the club management object to the specified file. Catch exceptions.
                              ************************************************************************************/
                             break;
                         case 'X':  //Deserialize ClubManagement from a File
@@ -214,6 +214,7 @@ public class Assignment8
                 "X\t\tDeserialize ClubManagement from File\n" +
                 "?\t\tDisplay Help\n\n");
     }
+
 }
 
 

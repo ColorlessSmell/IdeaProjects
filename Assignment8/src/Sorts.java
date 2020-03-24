@@ -2,10 +2,9 @@ import java.util.*;
 
 public class Sorts {
 
-    public static void sort(Club[] clubList, int size, Comparator<Club> newComparator){
+    public static void sort(Club[] clubList, int size, Comparator newComparator){
 
-        MemberNumberComparator numberComparator = new MemberNumberComparator();
-        selectionSort(clubList, numberComparator);
+        selectionSort(clubList, newComparator);
 
     }
 
@@ -14,13 +13,13 @@ public class Sorts {
         int min;	//smallest number's index
         Club temp;
 
-        for (int index = 0; index < inputObjectList.length()-1; index++)
+        for (int index = 0; index < inputObjectList.length-1; index++)
         {
             min = index;
-            for (int scan = index+1; scan < inputObjectList.length(); scan++)
+            for (int scan = index+1; scan < inputObjectList.length; scan++)
             {
-                //compare the two objects at index "scan" and "min" by using the xComparator
-                if ( xComparator.compare(inputObjectList[scan], inputObjectList[index]) < 0 )
+
+                if (xComparator.compare(inputObjectList[scan], inputObjectList[index]) < 0 )
                     min = scan;
             }
 

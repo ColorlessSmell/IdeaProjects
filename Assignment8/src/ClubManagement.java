@@ -1,7 +1,8 @@
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class ClubManagement implements Serializable {
+public class ClubManagement extends Sorts implements Serializable{
 
     public Club[] clubList;
     public int numberOfClubs;
@@ -16,10 +17,12 @@ public class ClubManagement implements Serializable {
 
         maxSize = maximumSize;
         numberOfClubs = 0;
+        clubList = new Club[maxSize];
+        Club club = null;
 
         for (int i = 0; i < maxSize; i++) {
 
-            clubList[i] = null;
+            clubList[i] = club;
 
         }
 
@@ -32,15 +35,16 @@ public class ClubManagement implements Serializable {
      */
     public int clubExists(String clubName, String university){
 
-        int result = 0;
+        int result = -1;
         int i = 0;
 
-        while (!clubList[i].getClubName().equals(clubName) && !clubList[i].getUniversity().equals(university)){
-
+        while (clubList[i] != null && !clubList[i].getClubName().equals(clubName) && !clubList[i].getUniversity().equals(university)){
+            int k = 0;
             if (clubList[i].getClubName().equals(clubName) && clubList[i].getUniversity().equals(university)){
-                result = i;
+                result = k;
             } else {
                 i++;
+                k++;
                 result = -1;
             }
 
@@ -59,13 +63,13 @@ public class ClubManagement implements Serializable {
         int result = 0;
         int i = 0;
 
-        while (!clubList[i].getCurrentPresident().getFirstName().equals(firstName) && !clubList[i].getCurrentPresident().getLastName().equals(lastName) && !clubList[i].getCurrentPresident().getAcademicLevel().equals(academicLevel)){
+        while (clubList[i] != null && !clubList[i].getCurrentPresident().getFirstName().equals(firstName) && !clubList[i].getCurrentPresident().getLastName().equals(lastName) && !clubList[i].getCurrentPresident().getAcademicLevel().equals(academicLevel)){
 
             if (clubList[i].getCurrentPresident().getFirstName().equals(firstName) && clubList[i].getCurrentPresident().getLastName().equals(lastName) && clubList[i].getCurrentPresident().getAcademicLevel().equals(academicLevel)){
                 result = i;
             } else {
-                i++;
                 result = -1;
+                i++;
             }
 
         }
@@ -82,15 +86,17 @@ public class ClubManagement implements Serializable {
      */
     public boolean addClub(String clubName, int numberOfMembers, String university, String firstName, String lastName, String academicLevel){
 
-    boolean result = false;
+    boolean result = true;
     int checking = clubExists(clubName, university);
 
     if (numberOfClubs == maxSize){
         result = false;
-    }
-    if (checking > -1){
+        System.out.println("maxSize");
+    } else if (checking > -1){
         result = false;
-    } else {
+        System.out.println(checking);
+    } else if (checking == -1) {
+        System.out.println(checking);
         President newPresident = new President(firstName, lastName, academicLevel);
         Club newClub = new Club(clubName, numberOfMembers, university, newPresident);
         clubList[numberOfClubs+1] = newClub;
@@ -126,5 +132,58 @@ public class ClubManagement implements Serializable {
 
     }
 
+    /*
+    The following 3 methods sort the club objects by comparing either
+    the club names or the member numbers or the current presidents alphabetically
+     */
+
+    public void sortByClubNames(){
+
+        ClubNameComparator nameComparator = new ClubNameComparator();
+        sort(clubList, numberOfClubs, nameComparator);
+
+    }
+
+    public void sortByMemberNumbers(){
+
+        MemberNumberComparator compareByNumbers = new MemberNumberComparator();
+        sort(clubList, numberOfClubs, compareByNumbers);
+
+    }
+
+    public void sortByCurrentPresidents(){
+
+        CurrentPresidentComparator presidentComparator = new CurrentPresidentComparator();
+        sort(clubList, numberOfClubs, presidentComparator);
+
+    }
+
+    public String listClubs(){
+
+        int i = 0;
+        String result = "";
+
+        while (clubList[i] != null && i < numberOfClubs){
+
+            result += clubList[i].toString();
+            i++;
+
+        }
+
+        return result;
+
+    }
+
+    public void closeClubManagement(){
+
+        numberOfClubs = 0;
+
+        for (int i = 0; i < numberOfClubs; i++){
+
+            clubList[i] = null;
+
+        }
+
+    }
 
 }
