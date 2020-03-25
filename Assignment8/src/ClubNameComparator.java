@@ -15,6 +15,14 @@ public class ClubNameComparator implements Comparator<Club>{
             c1Name = c1.getClubName();
             c2Name = c2.getClubName();
             result = c1Name.compareTo(c2Name);
+        } else if (c1 == null && c2 != null){
+
+            result = -1;
+
+        } else if (c1 != null && c2 == null){
+
+            result = 1;
+
         }
 
         return result;
