@@ -32,16 +32,22 @@ public class ClubManagement extends Sorts implements Serializable{
      */
     public int currentPresidentExists(String firstName, String lastName, String academicLevel){
 
-        int result = 0;
-        int i = 0;
+        int result = -1;
 
-        while (clubList[i] != null && !clubList[i].getCurrentPresident().getFirstName().equals(firstName) && !clubList[i].getCurrentPresident().getLastName().equals(lastName) && !clubList[i].getCurrentPresident().getAcademicLevel().equals(academicLevel)){
+        for (int i = 0; i < clubList.length; i++){
 
-            if (clubList[i].getCurrentPresident().getFirstName().equals(firstName) && clubList[i].getCurrentPresident().getLastName().equals(lastName) && clubList[i].getCurrentPresident().getAcademicLevel().equals(academicLevel)){
-                result = i;
-            } else {
-                result = -1;
-                i++;
+            String fName = clubList[i].getCurrentPresident().getFirstName();
+            String lName = clubList[i].getCurrentPresident().getLastName();
+            String aLevel = clubList[i].getCurrentPresident().getAcademicLevel();
+
+            if (clubList[i] != null){
+
+                if (fName.equals(firstName) && lName.equals(lastName) && aLevel.equals(academicLevel)){
+
+                    result = i;
+
+                }
+
             }
 
         }
@@ -159,18 +165,17 @@ public class ClubManagement extends Sorts implements Serializable{
 
     public String listClubs(){
 
-        int i = 0;
         String result = "";
 
-        while (clubList[i] != null && i < numberOfClubs){
+        for (int i = 0; i < clubList.length; i++){
 
-            result += clubList[i].toString();
-            i++;
+            if (clubList[i] != null) {
+
+                result += clubList[i].toString();
+            }
 
         }
-
         return result;
-
     }
 
     public void closeClubManagement(){
