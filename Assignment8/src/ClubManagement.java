@@ -1,6 +1,4 @@
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class ClubManagement extends Sorts implements Serializable{
 
@@ -61,9 +59,9 @@ public class ClubManagement extends Sorts implements Serializable{
 
         int result = -1;
 
-        for (int i = 0; i < numberOfClubs; i++){
+        for (int i = 0; i < clubList.length; i++){
 
-            if (clubList[i] != null){
+            if (clubList[i] != null && numberOfClubs <= clubList.length){
 
                 String c = clubList[i].getClubName();
                 String u = clubList[i].getUniversity();
@@ -93,18 +91,16 @@ public class ClubManagement extends Sorts implements Serializable{
     boolean result = true;
     int checking = clubExists(clubName, university);
 
-    if (numberOfClubs == maxSize){
+    if (numberOfClubs == clubList.length){
         result = false;
-        System.out.println("maxSize");
     } else if (checking > -1){
         result = false;
-        System.out.println(checking);
     } else if (checking == -1) {
         President newPresident = new President(firstName, lastName, academicLevel);
         Club newClub = new Club(clubName, numberOfMembers, university, newPresident);
-        numberOfClubs++;
         clubList[numberOfClubs] = newClub;
         result = true;
+        numberOfClubs++;
     }
 
     return result;
