@@ -8,7 +8,7 @@ public class Sorts {
 
     }
 
-    public static void selectionSort(Club[] inputObjectList, Comparator xComparator)
+    public static void selectionSort(Club[] inputObjectList, Comparator<Club> xComparator)
     {
         int min;	//smallest number's index
         Club temp;
