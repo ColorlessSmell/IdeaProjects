@@ -8,6 +8,7 @@
 //               entered.
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Assignment8
 {
@@ -21,6 +22,7 @@ public class Assignment8
         int operation2 = 0;
         String line;
         String filename;
+        Scanner scanner = new Scanner(System.in);
 
         // create a ClubManagement object. This is used throughout this class.
         ClubManagement clubManage1 = null;
@@ -147,6 +149,25 @@ public class Assignment8
                         case 'U':  //Write Text to a File
                             System.out.print("Please enter a file name to write:\n");
                             filename = stdin.readLine().trim();
+
+                            try {
+                                PrintWriter pr = new PrintWriter(filename);
+
+                                System.out.print("Please enter a string to write in the file:\n");
+                                String string = scanner.nextLine();
+                                pr.print(string + "\n");
+
+                                System.out.print(filename + " was written\n");
+
+                            } catch (FileNotFoundException e){
+
+                                    System.out.println(filename + " was not found");
+
+                                } catch (IOException e){
+
+                                    System.out.println(e);
+
+                                }
                             /************************************************************************************
                              ***  ADD your code to write a text (string) to the specified file. Catch exceptions.
                              ************************************************************************************/
@@ -154,6 +175,29 @@ public class Assignment8
                         case 'V':  //Read Text from a File
                             System.out.print("Please enter a file name to read:\n");
                             filename = stdin.readLine().trim();
+                            String firstLine = "";
+
+                            try {
+                                File file = new File(filename);
+                                Scanner sc = new Scanner(new File(filename));
+
+                                System.out.print(filename + " was read\n");
+
+                                while (sc.hasNext()){
+                                    firstLine = sc.nextLine();
+                                }
+
+                                System.out.print("The first line of the file is:\n" + firstLine + "\n");
+
+                            } catch (FileNotFoundException e){
+
+                                    System.out.println(filename + " was not found");
+
+                                } catch (IOException e){
+
+                                    System.out.println(e);
+
+                                }
                             /************************************************************************************
                              ***  ADD your code to read a text (string) from the specified file. Catch exceptions.
                              ************************************************************************************/
@@ -164,10 +208,58 @@ public class Assignment8
                             /************************************************************************************
                              ***  ADD your code to write the club management object to the specified file. Catch exceptions.
                              ************************************************************************************/
+                            try{
+
+                            File outFile = new File(filename);
+
+                            FileOutputStream fos = new FileOutputStream(outFile);
+
+                            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+                            oos.writeObject(clubManage1);
+
+                            oos.close();
+
+                            } catch (FileNotFoundException e){
+
+                                System.out.println("File was not found");
+
+                            } catch (IOException e){
+
+                                System.out.println(e);
+
+                            }
                             break;
                         case 'X':  //Deserialize ClubManagement from a File
                             System.out.print("Please enter a file name to read:\n");
                             filename = stdin.readLine().trim();
+
+                            try {
+                            File outFile = new File(filename);
+
+                            FileInputStream fis = new FileInputStream(outFile);
+
+                            ObjectInputStream ois = new ObjectInputStream(fis);
+
+                            ClubManagement clubManagement = (ClubManagement) ois.readObject();
+
+                            ois.close();
+
+                            } catch (FileNotFoundException e){
+
+                                System.out.println("File was not found");
+
+                            } catch (ClassNotFoundException e){
+
+                                System.out.println("Class specified was not found");
+
+                            }
+
+                            catch (IOException e){
+
+                                System.out.println(e);
+
+                            }
                             /************************************************************************************
                              ***  ADD your code to read a  club management from the specified file. Catch exception.
                              ***********************************************************************************/

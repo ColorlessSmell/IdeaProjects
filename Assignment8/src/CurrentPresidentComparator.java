@@ -1,17 +1,17 @@
 import java.util.Comparator;
 
-public class CurrentPresidentComparator implements Comparator<President>{
+public class CurrentPresidentComparator implements Comparator<Club>{
 
     private String lNamep1;
     private String lNamep2;
     private int result;
 
-    public int compare(President p1, President p2){
+    public int compare(Club p1, Club p2){
 
 
         if (p1 != null && p2 != null) {
-            lNamep1 = p1.getLastName();
-            lNamep2 = p2.getLastName();
+            lNamep1 = p1.getCurrentPresident().getLastName();
+            lNamep2 = p2.getCurrentPresident().getLastName();
         } else if (p1 == null && p2 != null){
 
             result = -1;
@@ -26,8 +26,8 @@ public class CurrentPresidentComparator implements Comparator<President>{
 
         } else if (lNamep1.equals(lNamep2)) {
 
-            String fNamep1 = p1.getFirstName();
-            String fNamep2 = p2.getFirstName();
+            String fNamep1 = p1.getCurrentPresident().getFirstName();
+            String fNamep2 = p2.getCurrentPresident().getFirstName();
 
             result = fNamep1.compareTo(fNamep2);
 

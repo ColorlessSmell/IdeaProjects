@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="516b5e47-2c38-40f5-8da0-54b5f629fd8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clubList" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clubList1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment6/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/ClubNameComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/ClubNameComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/MemberNumberComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/MemberNumberComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/Assignment8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/Assignment8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/ClubManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/ClubManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/CurrentPresidentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/CurrentPresidentComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClubManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClubManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrentPresidentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrentPresidentComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +32,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ZYfcjwwkAjz82Hs7xwRRShmrGb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -60,27 +72,30 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1585024378365">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1585120631863">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585024378365" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585111788234">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585120631863" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585125595512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585111788234" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585111788234">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585125595512" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585125595512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585111788234" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585111788233">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585125595512" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585125595512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585111788233" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585111788234">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585125595512" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585125595512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585111788234" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585125595512" />
     <state x="339" y="14" key="SettingsEditor" timestamp="1585028784940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

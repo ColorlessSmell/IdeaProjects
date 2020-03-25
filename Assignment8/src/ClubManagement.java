@@ -125,12 +125,11 @@ public class ClubManagement extends Sorts implements Serializable{
     int checking = clubExists(clubName, university);
 
     if (checking > -1){
-        result = false;
-    } else {
-        clubList[checking] = clubList[numberOfClubs+1];
         clubList[checking] = null;
         numberOfClubs--;
         result = true;
+    } else {
+        result = false;
     }
 
     return result;

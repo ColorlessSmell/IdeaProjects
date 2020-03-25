@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../Assignment8/clubList" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment8/clubList1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/Assignment8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/Assignment8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/ClubManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/ClubManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/CurrentPresidentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/CurrentPresidentComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/src/Assignment8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/Assignment8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/src/ClubManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/ClubManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/src/CurrentPresidentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/CurrentPresidentComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,8 +75,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1YJpXC0y2Nu2ArcgAZm3UUI80VQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -172,8 +188,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Assignment6" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
