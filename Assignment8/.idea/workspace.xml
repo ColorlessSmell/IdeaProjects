@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="516b5e47-2c38-40f5-8da0-54b5f629fd8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clubList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clubList1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment6/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/Assignment8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/Assignment8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/ClubManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/ClubManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment8/CurrentPresidentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment8/CurrentPresidentComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClubManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClubManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CurrentPresidentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrentPresidentComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BinaryDemo/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="516b5e47-2c38-40f5-8da0-54b5f629fd8c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
