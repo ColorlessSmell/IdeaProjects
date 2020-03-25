@@ -13,6 +13,14 @@ public class MemberNumberComparator implements Comparator<Club>{
             int club2 = c2.getNumberOfMembers();
 
             result = club1 - club2;
+        } else if (c1 == null && c2 != null){
+
+            result = -1;
+
+        } else if (c1 != null && c2 == null){
+
+            result = 1;
+
         }
 
         return result;
