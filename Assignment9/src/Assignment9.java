@@ -4,15 +4,16 @@ import java.io.*;
 
 public class Assignment9 {
 
-    private int[] anArray = new int[100];
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
 
 
 
     }
 
     public static int findMin(int[] numbers, int startIndex, int endIndex){
+
+
 
     }
 
@@ -28,33 +29,45 @@ public class Assignment9 {
 
     }
 
-    public int[] arrayOfNum(){
+    public static int[] createArray() throws IOException {
+        int[] array = new int[100];
+        int counter = 1;
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        String y = br.readLine();
+        int x = Integer.parseInt(y);
+        array[0] = x;
 
-        int counter = -1;
-        InputStreamReader ir = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(ir);
-        String temp = br.readLine();
-        int x = Integer.parseInt(temp);
+        if (x != 0) {
+            while (x != 0) {
 
-        if (x != 0){
-               counter++;
-               anArray[counter] = arrayOfNum();
-        } else if (x == 0) {
-            counter++;
-            anArray[counter] = 0;
-            return anArray;
+                y = br.readLine();
+                x = Integer.parseInt(y);
+                array[counter] = x;
+                counter++;
 
+            }
         }
 
+        return array;
     }
 
-    public int testingNum(int n){
 
-        if (n > 0){
-            return n-1;
+    public static int findMinimum(int[] someArray, int minimum, int timesLeft){
+        int currentMinimum = someArray[timesLeft];
+        int maybeNew = someArray[timesLeft+1];
+        if(!(timesLeft > someArray.length)){
+           if (currentMinimum < maybeNew){
+               int newMinimum = maybeNew;
+               int newTimes = timesLeft++;
+               return findMinimum(someArray, minimum, newTimes);
+           } else {
+               int newTimes = timesLeft++;
+               return findMinimum(someArray, currentMinimum, newTimes);
+           }
         } else {
-            return n;
+            return minimum;
         }
-    }
 
+    }
 }

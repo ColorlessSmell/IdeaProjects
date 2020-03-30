@@ -1,11 +1,16 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Bored {
 
+    private int counter = -1;
+    private int[] anArray = new int[100];
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 //        int[] numbers = {6, 29, 28, 33, 11, 100, 101, 43, 89};
 //
@@ -27,17 +32,31 @@ public class Bored {
 //        String x = "50";
 //        int y = Integer.parseInt(x);
 //        System.out.println(y);
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("================================");
-        for(int i=0;i<3;i++)
-        {
-            String s1=sc.nextLine();
-            String y=sc.nextLine();
-            int x = Integer.parseInt(y);
-            System.out.printf("%-15s%03d%n", s1, x);
+        int[] anArray = new int[5];
+                anArray = new int[]{3, 4, 6, 8, 0, 2};
+        System.out.println(findMinimum(anArray, anArray[0], 1));
         }
-        System.out.println("================================");
+
+    public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
+        int currentMinimum = someArray[newMinimum];
+        if(timesDone < someArray.length - 1){
+            int maybeNew = someArray[newMinimum++];
+            if (currentMinimum > maybeNew){
+                int something = timesDone++;
+                return findMinimum(someArray, something, maybeNew);
+            } else {
+                int newTimes = timesDone++;
+                return findMinimum(someArray, newTimes, currentMinimum);
+            }
+        } else if (timesDone == someArray.length - 1){
+            return currentMinimum;
+        }
+
     }
+
+
+
+
+
 
 }
