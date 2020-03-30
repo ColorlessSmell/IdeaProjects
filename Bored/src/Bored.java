@@ -47,8 +47,6 @@ public class Bored {
             } else {
                 return findMinimum(someArray, something, newMinimum);
             }
-        } else if (timesDone >= someArray.length - 1){
-            return currentMinimum;
         } else {
             return currentMinimum;
         }
