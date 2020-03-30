@@ -40,12 +40,12 @@ public class Bored {
     public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
         int currentMinimum = someArray[newMinimum];
         if(timesDone < someArray.length - 1){
-            int something = timesDone++;
+            timesDone++;
             int maybeNew = someArray[timesDone++];
             if (currentMinimum > maybeNew){
-                return findMinimum(someArray, something, something);
+                return findMinimum(someArray, timesDone, timesDone);
             } else {
-                return findMinimum(someArray, something, newMinimum);
+                return findMinimum(someArray, timesDone, newMinimum);
             }
         } else {
             return currentMinimum;
