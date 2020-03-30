@@ -20,6 +20,7 @@ import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
 
+
 public class PaneWithRectangles extends BorderPane
 {
     private ComboBox<String> primaryColorCombo;
@@ -164,43 +165,7 @@ public class PaneWithRectangles extends BorderPane
                     rectArray[i-1][j].setFill(secondaryColor);
                     rectArray[i][j+1].setFill(secondaryColor);
                     rectArray[i][j-1].setFill(secondaryColor);
-                } else if (i == 0 && j == 0){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i][j+1].setFill(secondaryColor);
-                    rectArray[i+1][j].setFill(secondaryColor);
-                } else if (i == 0 && j == 6){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i][j-1].setFill(secondaryColor);
-                    rectArray[i+1][j].setFill(secondaryColor);
-                } else if (i == 6 && j == 6){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i][j-1].setFill(secondaryColor);
-                    rectArray[i-1][j].setFill(secondaryColor);
-                } else if (i == 6 && j == 0){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i][j+1].setFill(secondaryColor);
-                    rectArray[i-1][j].setFill(secondaryColor);
-                } else if (i > 0 && j == 0){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i+1][j].setFill(secondaryColor);
-                    rectArray[i-1][j].setFill(secondaryColor);
-                    rectArray[i][j+1].setFill(secondaryColor);
-                } else if (i > 0 && j == 6){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i+1][j].setFill(secondaryColor);
-                    rectArray[i-1][j].setFill(secondaryColor);
-                    rectArray[i][j-1].setFill(secondaryColor);
-                } else if (i == 6 && j > 0 && j < 6){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i-1][j].setFill(secondaryColor);
-                    rectArray[i][j-1].setFill(secondaryColor);
-                    rectArray[i][j+1].setFill(secondaryColor);
-                }
-                else if (i == 0 && j > 0){
-                    rectArray[i][j].setFill(primaryColor);
-                    rectArray[i+1][j].setFill(secondaryColor);
-                    rectArray[i][j-1].setFill(secondaryColor);
-                    rectArray[i][j+1].setFill(secondaryColor);
+                } else if (i == 0 && j > 0){
                 } else if(event.getEventType() == MouseEvent.MOUSE_RELEASED)
                 {
                     for(int r = 0; i < rectArray.length; i++)
@@ -212,8 +177,6 @@ public class PaneWithRectangles extends BorderPane
                         }
                     }
                 }
-//
-
             }
 
 
@@ -270,7 +233,6 @@ public class PaneWithRectangles extends BorderPane
             for (int i = 0; i < 7; i++){
 
                 for (int j = 0; j < 7; j++){
-
 
                     rectArray[i][j].setFill(backgroundColor);
 

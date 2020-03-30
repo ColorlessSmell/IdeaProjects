@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c345e5-73af-46ba-90ae-90d76643a40d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assignment8/clubList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment8/clubList1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextAreaHandling/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TextAreaHandling/src/TextAreaHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment7/src/PaneWithRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment7/src/PaneWithRectangles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignment8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/Assignment8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/Assignment8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/ClubManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/ClubManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/CurrentPresidentComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/out/production/Assignment8/CurrentPresidentComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/src/Assignment8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/Assignment8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/src/ClubManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/ClubManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment8/src/CurrentPresidentComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/CurrentPresidentComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment8/src/ClubNameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment8/src/ClubNameComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinaryDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
