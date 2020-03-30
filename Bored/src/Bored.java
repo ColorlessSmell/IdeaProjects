@@ -33,15 +33,15 @@ public class Bored {
 //        int y = Integer.parseInt(x);
 //        System.out.println(y);
         int[] anArray = new int[5];
-                anArray = new int[]{3, 4, 6, 8, 0, 2};
+                anArray = new int[]{3, 4, 6, 8, 0};
         System.out.println(findMinimum(anArray, 0, 0));
         }
 
     public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
         int currentMinimum = someArray[newMinimum];
-        if(timesDone < 4){
+        if(timesDone < someArray.length - 1){
             int something = timesDone++;
-            int maybeNew = someArray[newMinimum++];
+            int maybeNew = someArray[timesDone++];
             if (currentMinimum > maybeNew){
                 return findMinimum(someArray, something, something);
             } else {
