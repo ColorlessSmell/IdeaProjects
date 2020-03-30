@@ -34,21 +34,22 @@ public class Bored {
 //        System.out.println(y);
         int[] anArray = new int[5];
                 anArray = new int[]{3, 4, 6, 8, 0, 2};
-        System.out.println(findMinimum(anArray, anArray[0], 1));
+        System.out.println(findMinimum(anArray, 0, 0));
         }
 
     public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
         int currentMinimum = someArray[newMinimum];
-        if(timesDone < someArray.length - 1){
+        if(timesDone < 4){
+            int something = timesDone++;
             int maybeNew = someArray[newMinimum++];
             if (currentMinimum > maybeNew){
-                int something = timesDone++;
-                return findMinimum(someArray, something, maybeNew);
+                return findMinimum(someArray, something, something);
             } else {
-                int newTimes = timesDone++;
-                return findMinimum(someArray, newTimes, currentMinimum);
+                return findMinimum(someArray, something, newMinimum);
             }
-        } else if (timesDone == someArray.length - 1){
+        } else if (timesDone >= someArray.length - 1){
+            return currentMinimum;
+        } else {
             return currentMinimum;
         }
 
