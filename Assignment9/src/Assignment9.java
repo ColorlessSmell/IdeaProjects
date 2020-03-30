@@ -53,7 +53,7 @@ public class Assignment9 {
     }
 
 
-    public static int findMinimum(int[] someArray, int minimum, int timesLeft){
+    public static int findMinimum(int[] someArray, int minimum`, int timesLeft){
         int currentMinimum = someArray[timesLeft];
         int maybeNew = someArray[timesLeft+1];
         if(!(timesLeft > someArray.length)){
