@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.io.*;
 
 public class Bored {
 
@@ -32,30 +33,55 @@ public class Bored {
 //        String x = "50";
 //        int y = Integer.parseInt(x);
 //        System.out.println(y);
-        int[] anArray = new int[5];
-                anArray = new int[]{3, 4, 6, 8, 0};
-        System.out.println(findMinimum(anArray, 0, 0));
-        }
+//        int[] anArray = new int[5];
+//                anArray = new int[]{3, 4, 6, 8, 10};
+//        System.out.println("The minimum is:\t" + findMinimum(anArray, 0, 0));
 
-    public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
-        int currentMinimum = someArray[newMinimum];
-        if(timesDone < someArray.length - 1){
-            timesDone++;
-            int maybeNew = someArray[timesDone++];
-            if (currentMinimum > maybeNew){
-                return findMinimum(someArray, timesDone, timesDone);
-            } else {
-                return findMinimum(someArray, timesDone, newMinimum);
+
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader br = new BufferedReader(isr);
+
+                int counter = 1;
+                String x = br.readLine();
+                int y = Integer.parseInt(x);
+                int[] array = new int[100];
+                array[0] = y;
+
+                while (y != 0){
+                    x = br.readLine();
+                    y = Integer.parseInt(x);
+                    array[counter] = y;
+                    counter++;
+                    System.out.println("Counter is: " + counter);
+                }
+
+                array[counter] = 0;
+
+                for (int i = 0; i < counter - 1; i++){
+                    System.out.print(array[i] + "\t");
+                }
+                System.out.print("\n" + counter);
+
             }
-        } else {
-            return currentMinimum;
         }
 
-    }
-
-
-
-
-
-
-}
+//    public static int findMinimum(int[] someArray, int timesDone, int newMinimum){
+//        int currentMinimum = someArray[newMinimum];
+//
+//        if (timesDone == someArray.length - 1){
+//            if (someArray[newMinimum] > someArray[timesDone]){
+//                return someArray[timesDone];
+//            } else {
+//                return currentMinimum;
+//            }
+//        } else {
+//            timesDone++;
+//            int maybeNew = someArray[timesDone];
+//            if (currentMinimum > maybeNew){
+//                return findMinimum(someArray, timesDone, timesDone);
+//            } else {
+//                return findMinimum(someArray, timesDone, newMinimum);
+//            }
+//        }
+//
+//    }
