@@ -1,4 +1,10 @@
-import jdk.internal.util.xml.impl.Input;
+// Assignment #: 9
+//         Name: Yousuf Khoori
+//    StudentID: 1218037782
+//      Lecture: MWF 11:50AM
+//  Description: Assignment 9 makes use of recursive methods to display the
+//               minimum number, minimum even number, sum of odd numbers and
+//               count of negative numbers in an array of ints
 
 import java.io.*;
 
@@ -12,16 +18,21 @@ public class Assignment9 {
 
     int counter = 1;
     String x = br.readLine();
-    int y = Integer.parseInt(x);
-    int[] array = new int[];
-    array[0] = y;
+    int[] array = new int[100];
+    array[0] = Integer.parseInt(x);
 
-    while (y != 0){
+    while (!x.equals("0")){
+
         x = br.readLine();
-        y = Integer.parseInt(x);
-        array[counter] = y;
+        array[counter] = Integer.parseInt(x);
         counter++;
+
     }
+
+    System.out.println("The minimum number is " + findMin(array, 0, 0));
+    System.out.println("The count of odd integers in the sequence is " + countOddNumbers(array, 0, 0, counter));
+    System.out.println("The largest even integer in the sequence is " + largestEven(array, 0, 0, counter));
+    System.out.println("The sum of numbers larger than the first is " + + sumLargerThanFirst(array, 0, 0));
 
     }
 
@@ -48,15 +59,92 @@ public class Assignment9 {
 
     }
 
-    public static int countOddNumbers(int[] elements, int startIndex, int endIndex){
+    //This method counts the number of odd integers in the array
+    public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount){
+
+        int divisible = elements[timesDone] % 3;
+
+        if (timesDone == trackCount - 1){
+            if (divisible == 0){
+
+                sum++;
+                return sum;
+
+            } else {
+                return sum;
+            }
+        } else {
+                if (divisible == 0) {
+                    sum++;
+                    timesDone++;
+                    return countOddNumbers(elements, sum, timesDone, trackCount);
+                } else {
+                    timesDone++;
+                    return countOddNumbers(elements, sum, timesDone, trackCount);
+
+            }
+        }
 
     }
 
-    public static int computeLargestEven(int[] elements, int startIndex, int endIndex){
+    //This method uses the same techniques as findMin but the difference is that
+    //it first checks if the number is even or not and instead of finding the smallest
+    //it is finding the largest even number
+    public static int largestEven(int[] elements, int timesDone, int newMinimum, int trackCount){
+        int even = elements[timesDone] % 2;
+
+        if (timesDone == trackCount - 1){
+
+            if (even == 0){
+                if (elements[timesDone] > elements[newMinimum]){
+                    return elements[timesDone];
+                } else {
+                    return elements[newMinimum];
+                }
+            } else {
+                return elements[newMinimum];
+            }
+
+        } else {
+
+            if (even == 0){
+                if (elements[timesDone] > elements[newMinimum]){
+                    timesDone++;
+                    return largestEven(elements, timesDone, timesDone, trackCount);
+                } else {
+                    timesDone++;
+                    return largestEven(elements, timesDone, newMinimum, trackCount);
+                }
+            } else {
+                timesDone++;
+                return largestEven(elements, timesDone, newMinimum, trackCount);
+            }
+        }
 
     }
 
-    public static int sumOfNumbersLargerThanFirst(int[] elements, int startIndex, int endIndex, int firstNumber){
+    //This method computes the sum of numbers in the array that are larger
+    //the element at the first index of the array (index 0)
+    public static int sumLargerThanFirst(int[] elements, int sum, int count){
+
+        int firstNum = elements[0];
+
+        if (count == elements.length - 1) {
+
+            sum += elements[count];
+            return sum;
+
+        } else {
+
+            if(elements[count] > firstNum) {
+                sum += elements[count];
+                count++;
+                return sumLargerThanFirst(elements, sum, count);
+            } else {
+                count++;
+                return sumLargerThanFirst(elements, sum, count);
+            }
+        }
 
     }
 

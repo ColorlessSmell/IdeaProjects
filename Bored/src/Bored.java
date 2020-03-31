@@ -41,26 +41,51 @@ public class Bored {
                 InputStreamReader isr = new InputStreamReader(System.in);
                 BufferedReader br = new BufferedReader(isr);
 
-                int counter = 1;
-                String x = br.readLine();
-                int y = Integer.parseInt(x);
-                int[] array = new int[100];
-                array[0] = y;
+        //creating scanner object for reading input
 
-                while (y != 0){
-                    x = br.readLine();
-                    y = Integer.parseInt(x);
-                    array[counter] = y;
-                    counter++;
-                    System.out.println("Counter is: " + counter);
-                }
+        //initializing array
+//        int[] array = new int[100];
+//
+//        //This represents the amount of elements the user added, also acts as the counter when processing input
+//        int counter = 0;
+//        //String for input
+//        String input = "";
+//
+//        //Keep getting user input until 0 is entered
+//        //Will still store 0
+//        while (!input.equals("0")) {
+//            input = br.readLine();
+//            array[counter] = Integer.parseInt(input);
+//            counter++;
+//        }
+//
+//        //printing array
+//        for (int i = 0; i < counter; i++) {
+//            System.out.print(i + ", ");
+//        }
+//        System.out.println();
+//        System.out.println("Elements in array: " + counter);
 
-                array[counter] = 0;
+//                int counter = 1;
+//                String x = br.readLine();
+//                int[] array = new int[100];
+//                array[0] = Integer.parseInt(x);
+//
+//                while (!x.equals("0")){
+//                    x = br.readLine();
+//                    array[counter] = Integer.parseInt(x);
+//                    counter++;
+//                    System.out.println("Counter is: " + counter);
+//                }
+//
+//                array[counter] = 0;
+//
+//                for (int i = 0; i < counter; i++){
+//                    System.out.print(array[i] + "\t");
+//                }
+//                System.out.print("\n" + counter);
 
-                for (int i = 0; i < counter - 1; i++){
-                    System.out.print(array[i] + "\t");
-                }
-                System.out.print("\n" + counter);
+        System.out.println(-12 % 3);
 
             }
         }
