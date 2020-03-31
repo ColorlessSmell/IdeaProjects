@@ -67,10 +67,10 @@ public class Assignment9 {
     //This method counts the number of odd integers in the array
     public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount, ArrayList oddInts){
 
-        int divisible = elements[timesDone] % 3;
+        int divisible = elements[timesDone] % 2;
 
         if (timesDone == trackCount){
-            if (divisible == 0 && !(oddInts.contains(elements[timesDone]))){
+            if (divisible == 1 && !(oddInts.contains(elements[timesDone]))){
 
                 sum++;
                 return sum;
@@ -79,7 +79,7 @@ public class Assignment9 {
                 return sum;
             }
         } else {
-                if (divisible == 0 && !(oddInts.contains(elements[timesDone]))) {
+                if (divisible == 1 && !(oddInts.contains(elements[timesDone]))) {
                     sum++;
                     timesDone++;
                     oddInts.add(elements[timesDone]);
