@@ -7,6 +7,7 @@
 //               count of negative numbers in an array of ints
 
 import java.io.*;
+import java.lang.*;
 
 public class Assignment9 {
 
@@ -29,8 +30,10 @@ public class Assignment9 {
 
     }
 
+    int[] oddIntsArray = new int[100];
+
     System.out.println("The minimum number is " + findMin(array, 0, 0));
-    System.out.println("The count of odd integers in the sequence is " + countOddNumbers(array, 0, 0, counter));
+    System.out.println("The count of odd integers in the sequence is " + countOddNumbers(array, 0, 0, counter, oddIntsArray));
     System.out.println("The largest even integer in the sequence is " + largestEven(array, 0, 0, counter));
     System.out.println("The sum of numbers larger than the first is " + + sumLargerThanFirst(array, 0, 0));
 
@@ -60,12 +63,12 @@ public class Assignment9 {
     }
 
     //This method counts the number of odd integers in the array
-    public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount){
+    public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount, int[] oddInts){
 
         int divisible = elements[timesDone] % 3;
 
         if (timesDone == trackCount - 1){
-            if (divisible == 0 && elements[timesDone] != 0){
+            if (divisible == 0 && elements[timesDone] != 0 && !(oddInts.)){
 
                 sum++;
                 return sum;
