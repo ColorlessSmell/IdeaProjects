@@ -16,16 +16,16 @@ public class Assignment9 {
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader br = new BufferedReader(isr);
 
-    int counter = 1;
+    int counter = 0;
     String x = br.readLine();
     int[] array = new int[100];
     array[0] = Integer.parseInt(x);
 
     while (!x.equals("0")){
 
+        counter++;
         x = br.readLine();
         array[counter] = Integer.parseInt(x);
-        counter++;
 
     }
 
@@ -65,7 +65,7 @@ public class Assignment9 {
         int divisible = elements[timesDone] % 3;
 
         if (timesDone == trackCount - 1){
-            if (divisible == 0){
+            if (divisible == 0 && elements[timesDone] != 0){
 
                 sum++;
                 return sum;
@@ -90,34 +90,35 @@ public class Assignment9 {
     //This method uses the same techniques as findMin but the difference is that
     //it first checks if the number is even or not and instead of finding the smallest
     //it is finding the largest even number
-    public static int largestEven(int[] elements, int timesDone, int newMinimum, int trackCount){
+    public static int largestEven(int[] elements, int timesDone, int newMaximum, int trackCount){
         int even = elements[timesDone] % 2;
 
-        if (timesDone == trackCount - 1){
+        if (timesDone == trackCount){
 
             if (even == 0){
-                if (elements[timesDone] > elements[newMinimum]){
+                if (elements[timesDone] > elements[newMaximum]){
                     return elements[timesDone];
                 } else {
-                    return elements[newMinimum];
+                    return elements[newMaximum];
                 }
             } else {
-                return elements[newMinimum];
+                return elements[newMaximum];
             }
 
         } else {
 
             if (even == 0){
-                if (elements[timesDone] > elements[newMinimum]){
+                if (elements[timesDone] > elements[newMaximum]){
+                    int aNewMaximum = timesDone;
                     timesDone++;
-                    return largestEven(elements, timesDone, timesDone, trackCount);
+                    return largestEven(elements, timesDone, aNewMaximum, trackCount);
                 } else {
                     timesDone++;
-                    return largestEven(elements, timesDone, newMinimum, trackCount);
+                    return largestEven(elements, timesDone, newMaximum, trackCount);
                 }
             } else {
                 timesDone++;
-                return largestEven(elements, timesDone, newMinimum, trackCount);
+                return largestEven(elements, timesDone, newMaximum, trackCount);
             }
         }
 
