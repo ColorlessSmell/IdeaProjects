@@ -7,7 +7,8 @@
 //               count of negative numbers in an array of ints
 
 import java.io.*;
-import java.lang.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Assignment9 {
 
@@ -17,6 +18,7 @@ public class Assignment9 {
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader br = new BufferedReader(isr);
 
+    ArrayList oddInts = new ArrayList();
     int counter = 0;
     String x = br.readLine();
     int[] array = new int[100];
@@ -33,7 +35,7 @@ public class Assignment9 {
     int[] oddIntsArray = new int[100];
 
     System.out.println("The minimum number is " + findMin(array, 0, 0));
-    System.out.println("The count of odd integers in the sequence is " + countOddNumbers(array, 0, 0, counter, oddIntsArray));
+    System.out.println("The count of odd integers in the sequence is " + countOddNumbers(array, 0, 0, counter, oddInts));
     System.out.println("The largest even integer in the sequence is " + largestEven(array, 0, 0, counter));
     System.out.println("The sum of numbers larger than the first is " + + sumLargerThanFirst(array, 0, 0));
 
@@ -63,12 +65,12 @@ public class Assignment9 {
     }
 
     //This method counts the number of odd integers in the array
-    public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount, int[] oddInts){
+    public static int countOddNumbers(int[] elements, int sum, int timesDone, int trackCount, ArrayList oddInts){
 
         int divisible = elements[timesDone] % 3;
 
-        if (timesDone == trackCount - 1){
-            if (divisible == 0 && elements[timesDone] != 0 && !(oddInts.)){
+        if (timesDone == trackCount){
+            if (divisible == 0 && !(oddInts.contains(elements[timesDone]))){
 
                 sum++;
                 return sum;
@@ -77,13 +79,14 @@ public class Assignment9 {
                 return sum;
             }
         } else {
-                if (divisible == 0) {
+                if (divisible == 0 && !(oddInts.contains(elements[timesDone]))) {
                     sum++;
                     timesDone++;
-                    return countOddNumbers(elements, sum, timesDone, trackCount);
+                    oddInts.add(elements[timesDone]);
+                    return countOddNumbers(elements, sum, timesDone, trackCount, oddInts);
                 } else {
                     timesDone++;
-                    return countOddNumbers(elements, sum, timesDone, trackCount);
+                    return countOddNumbers(elements, sum, timesDone, trackCount, oddInts);
 
             }
         }
